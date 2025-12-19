@@ -6,9 +6,17 @@ class Cola(Drink):
     def make(self):
         return 'made a cola'
 
+class Sprite(Drink):
+    def make(self):
+        return 'made a sprite'
+
 class Fanta(Drink):
     def make(self):
         return 'made a fanta'
+
+class Lipton(Drink):
+    def make(self):
+        return 'made a lipton'
 
 der factory_methode(drink_type):
     if drink_type == 'cola':
