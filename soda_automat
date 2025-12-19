@@ -17,12 +17,21 @@ class Fanta(Drink):
 class Lipton(Drink):
     def make(self):
         return 'made a lipton'
+class Spezi(Drink):
+    def make(self):
+        return 'made a spezi' 
 
 der factory_methode(drink_type):
     if drink_type == 'cola':
         return Cola()
     elif drink_type == 'fanta':
         return Fanta()
+    elif drink_type == 'sprite':
+        return Sprite()
+    elif drink_type == 'lipton':
+        return Lipton()
+    elif drink_type == 'spezi':
+        return Spezi()
     else:
         return Drink()
 
