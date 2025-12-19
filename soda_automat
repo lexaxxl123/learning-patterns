@@ -1,0 +1,22 @@
+class Drink:
+    def make(self):
+        return 'made a drink'
+
+class Cola(Drink):
+    def make(self):
+        return 'made a cola'
+
+class Fanta(Drink):
+    def make(self):
+        return 'made a fanta'
+
+der factory_methode(drink_type):
+    if drink_type == 'cola':
+        return Cola()
+    elif drink_type == 'fanta':
+        return Fanta()
+    else:
+        return Drink()
+
+drink = factory_methods('cola')
+print(drink.make)
