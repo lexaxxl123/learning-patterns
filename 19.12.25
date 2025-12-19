@@ -1,0 +1,18 @@
+class Singelton:
+    save_obj = None
+
+def __new__(cls):
+    if cls.save_obj is None:
+        cls.save_obj = super().__new__(cls)
+
+    return cls.save_obj
+
+a = Singelton
+b = Singelton
+
+print(a == b)
+#print(a is b)
+
+
+======================================
+
