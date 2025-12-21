@@ -15,11 +15,11 @@ class Movement:
         return self.strategy()
 
 movement = Movement(walk)
-print(movement.go())
+print(movement.move())
 
 movement.strtegy = bus
-print(movement.go())
+print(movement.move())
 
 movement.strategy = car
-print(movement.go())
+print(movement.move())
 
