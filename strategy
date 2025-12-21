@@ -1,0 +1,25 @@
+def walk:
+   return 'walking'
+
+def bus:
+   return 'taking a bus'
+
+def car:
+   return 'commuting by car'
+
+class Movement:
+    def __init__(self, strategy):
+        self.strategy = strategy
+
+    def move(self):
+        return self.strategy()
+
+movement = Movement(walk)
+print(movement.go())
+
+movement.strtegy = bus
+print(movement.go())
+
+movement.strategy = car
+print(movement.go())
+
