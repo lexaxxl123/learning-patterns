@@ -1,0 +1,41 @@
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return'division by zero :('
+    else:
+        return a / b
+
+class Calculator:
+    def __init__(self, strategy):
+      self.strategy = strategy
+
+    def action(self, a, b):
+      return self.strategy(a, b)
+
+
+a = int(input('1st number:'))
+sign = input('sign(+,-,/,*):')
+b = int(input('2nd number:'))
+    
+if sign == '+':
+    calculator = Calculator(add)
+elif sign == '-': 
+    calculator = Calculator(subtract)
+elif sign == '/':
+    calculator = Calculator(divide)
+elif sign == '*':
+    calculator = Calculator(multiply)
+else:
+    print('Seems that you made a mistake:(')
+    exit()
+
+result = calculator.action(a, b)
+print('Your answer:' , result)
